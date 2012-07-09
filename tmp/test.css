@@ -1,0 +1,24 @@
+html{
+    height:100%;
+}
+
+body{
+    height: 100%;
+}
+
+#artbox {
+  background: url(../images/artbox.png) no-repeat;
+  background-size: 100%;
+  height: 100%;
+}
+
+#title {
+  background: url(../images/title.png) no-repeat;
+  background-size: 25%;
+  width: 100%;
+  height: 200px;
+  background-position:center center;
+  padding-top: 9.25%;
+  }
+
+.centerbox {background-position:center center; background: green;}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vampire: the Masquerade, HTML Character Sheet (Test 1)</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="char.js"></script>
+    <script type="text/javascript">
+
+var current_char = new Character("Simon", "Ventrue", 8);
+
+function Dots(title, cur, max) {
+  var cont = $('<div></div>').addClass('dots');
+  var dots = new Array(max);
+  var i = 0;
+  for (; i < cur; i++) {
+    dots[i] = $('<img>').attr('src', '../images/fulldot.png');
+    dots[i].click(function() { alert("Clickety! " + i); }
+    cont.append(dots[i]);
+  }
+  for (; i < max; i++) {
+    dots[i] = $('<img>').attr('src', '../images/emptydot.png');
+    cont.append(dots[i]);
+  }
+  return cont;
+}
+
+$(document).ready(function() {
+
+});
+    </script>
+  </head>
+  <body>
+    <div id="foo"></div>
+  </body>
+</html>
