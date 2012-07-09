@@ -8,24 +8,35 @@
 
 var current_char = new Character("Simon", "Ventrue", 8);
 
+$("#foo")
+
 function Dots(title, cur, max) {
   var cont = $('<div></div>').addClass('dots');
   var dots = new Array(max);
+  var changeDotValue = function(new_cur) {
+    return function() {
+      var i = 0;
+      for (; i < max; i++) {
+        console.log("Got: " + i);
+      }
+    }
+  };
   var i = 0;
   for (; i < cur; i++) {
     dots[i] = $('<img>').attr('src', '../images/fulldot.png');
-    dots[i].click(function() { alert("Clickety! " + i); }
+    dots[i].click(changeDotValue(i));
     cont.append(dots[i]);
   }
   for (; i < max; i++) {
     dots[i] = $('<img>').attr('src', '../images/emptydot.png');
+    dots[i].click(changeDotValue(i));
     cont.append(dots[i]);
   }
   return cont;
 }
 
 $(document).ready(function() {
-
+  $("#foo").append(Dots("Hello",2,5))
 });
     </script>
   </head>
