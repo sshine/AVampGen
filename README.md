@@ -1,4 +1,4 @@
-HTMLVampGen
+AVampGen
 ===========
 
-A Vampire Character Sheet Manager written in HTML5, CSS, JavaScript, jQuery
+A Vampire Character Sheet Manager -- currently, only graphics reside in this repo.
